@@ -90,11 +90,11 @@ export default function Home(results) {
             setCharacters(characters);
           }
         }}>
-          <Stack maxWidth="450px" width="100" align="center" isInline mb={8}>
+          <Stack direction={["column", "row"]} maxWidth="200px" width="100" mb={20}>
              <Input placeholder="search"  value={search} border="none" onChange={(e)=>
             setSearch(e.target.value)}/>
-             <IconButton colorScheme="blue" aria-label="search-database" icon={<SearchIcon/>} disabled={search ===""} type="submit"/>
-            <IconButton colorScheme="red" aria-label="Reset-button" icon={<CloseIcon/>} disabled={search===""} onClick={
+             <IconButton aria-label="search-database" icon={<SearchIcon/>} colorScheme="blue"  disabled={search ===""} type="submit"/>
+            <IconButton aria-label="Reset-button" icon={<CloseIcon/>} colorScheme="red"  disabled={search===""} onClick={
             async()=>{
               setSearch("")
               setCharacters(initialState.characters)
